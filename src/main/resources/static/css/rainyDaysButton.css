@@ -1,0 +1,11 @@
+.rainyDaysButton {
+    margin-top: 0.7em;
+    margin-bottom: -0.5em;
+    font-size: 15px;
+    color: white;
+    background-color: #4a899759;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    height: 3em;
+}

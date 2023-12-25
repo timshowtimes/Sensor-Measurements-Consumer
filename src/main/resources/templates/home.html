@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/responseContainer.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/submitButton.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/inputText.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/divContainer.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/hideListButton.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/rainyDaysButton.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/rainyCount.css}"/>
+</head>
+<body>
+<div style="display: flex; justify-content: space-between">
+    <div>
+        <div class="divCont">
+            <div>
+                <label style="font-weight: bold" for="sensorName">Имя сенсора:</label>
+                <input class="inputText" id="sensorName" type="text">
+                <input class="submitButton" type="submit" value="Создать" onclick="createSensor()">
+                <div style="width: 20em" class="respCont" id="responseContainer"></div>
+            </div>
+        </div>
+        <div id="graphImage"></div>
+    </div>
+    <div class="divCont">
+        <div style="margin-bottom: 10px">
+            <label style="font-weight: bold" for="tempValue">Температура: </label>
+            <input class="inputText" placeholder="В Цельсиях (C°)" id="tempValue" type="text">
+        </div>
+        <div style="margin-bottom: 10px">
+            <input style="width: 1.5em; height: 1.5em;" id="raining" type="checkbox" th:value="true">
+            <label style="font-weight: bold" for="raining"> Дождь? </label>
+        </div>
+        <div style="margin-bottom: 20px">
+            <label style="font-weight: bold" for="sensor"> Имя сенсора: </label>
+            <input class="inputText" id="sensor" type="text">
+        </div>
+        <input style="margin-left: 11.4em" class="submitButton" type="submit"
+               value="Добавить" onclick="addMeasurements()"/>
+        <div style="width: 14.1em" class="respCont" id="responseMeasurements"></div>
+    </div>
+    <div style="font-size: 1.2em; max-width: 21em;" class="divCont">
+        <div id="submitToShowSensorList" style="display: flex">
+            <input id="listOfMeasurements" style="width: 21em; margin-top: 10px"
+                   class="submitButton" type="submit" value="Cписок зарегестрированных измерений:"
+                   onclick="findAll()"/>
+        </div>
+        <div id="rainyDaysDiv" style="display: flex"></div>
+        <div id="graphic"></div>
+        <ul style="padding-left: 25px" id="list-container"></ul>
+    </div>
+</div>
+
+
+<script th:src="@{/js/createSensor.js}"></script>
+<script th:src="@{/js/sendDataToServer.js}"></script>
+<script th:src="@{/js/addMeasurements.js}"></script>
+<script th:src="@{/js/findAll.js}"></script>
+<script th:src="@{/js/showRainyDayCount.js}"></script>
+<script th:src="@{/js/sendDataToShowGraphic.js}"></script>
+</body>
+</html>

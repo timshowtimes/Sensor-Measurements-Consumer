@@ -1,0 +1,16 @@
+.divCont {
+    background-color: #39393966;
+    padding: 15px;
+    border-radius: 13px;
+    width: fit-content;
+    max-height: 27em;
+    overflow: auto;
+    overflow-x: hidden;
+    height: fit-content;
+}
+
+body {
+    font-size: 1em;
+    background-image: linear-gradient(to right, #000, #150120);
+    color: white;
+}

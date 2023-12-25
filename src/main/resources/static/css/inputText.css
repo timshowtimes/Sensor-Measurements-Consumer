@@ -1,0 +1,7 @@
+.inputText {
+    font-size: 15px;
+    padding: 5px;
+    border-top-style: none;
+    border-bottom-style: outset;
+    border-left-style: dashed;
+}
